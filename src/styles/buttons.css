@@ -1,0 +1,80 @@
+/* Shared button variants: .Button + one of Primary / Secondary / Ghost. */
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  height: 3rem;
+  padding: 0 var(--space-5);
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    background-color var(--duration-base) var(--ease-out),
+    border-color var(--duration-base) var(--ease-out),
+    color var(--duration-base) var(--ease-out),
+    filter var(--duration-base) var(--ease-out);
+}
+
+.Button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.Button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.PrimaryButton {
+  background: var(--gradient-button);
+  color: #fff;
+  box-shadow: var(--shadow-button);
+}
+
+.PrimaryButton:disabled {
+  box-shadow: none;
+}
+
+.SecondaryButton {
+  background: var(--color-surface-raised);
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
+}
+
+.GhostButton {
+  height: 2rem;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+
+.IconButton {
+  width: 2rem;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+@media (hover: hover) {
+  .PrimaryButton:hover:not(:disabled) {
+    filter: brightness(1.1);
+  }
+
+  .SecondaryButton:hover:not(:disabled) {
+    background: var(--color-surface-raised-hover);
+  }
+
+  .GhostButton:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--color-text);
+  }
+}

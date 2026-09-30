@@ -1,0 +1,85 @@
+/*
+ * Design tokens — the single source of truth for colour, type, spacing,
+ * radius, elevation and motion. Change the look of the whole app here.
+ * Names mirror how they would be set up as Figma variables.
+ */
+:root {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --color-bg: #07090f;
+  --color-surface: rgba(17, 21, 31, 0.78);
+  --color-surface-raised: #1a1f2c;
+  --color-surface-raised-hover: #222838;
+  --color-surface-sunken: rgba(8, 11, 18, 0.7);
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.16);
+
+  /* Text */
+  --color-text: #eef0f6;
+  --color-text-muted: #a3aabb;
+  --color-text-subtle: #737b8f;
+
+  /* Brand — keeps the cyan → blue glow of the original design */
+  --color-accent: #8b7cf6;
+  --color-accent-soft: rgba(139, 124, 246, 0.14);
+  --color-accent-ring: rgba(139, 124, 246, 0.5);
+  --color-accent-text: #cdc6ff;
+  --color-glow-cyan: rgba(15, 184, 227, 0.2);
+  --color-glow-blue: rgba(11, 1, 250, 0.26);
+  --gradient-accent: linear-gradient(90deg, #22d3ee 0%, #8b7cf6 55%, #e879f9 100%);
+  --gradient-button: linear-gradient(135deg, #6d5ef5 0%, #a24de8 100%);
+
+  /* Feedback */
+  --color-success: #4ade80;
+  --color-success-soft: rgba(74, 222, 128, 0.1);
+  --color-warning: #fbbf24;
+  --color-warning-soft: rgba(251, 191, 36, 0.1);
+  --color-danger: #f87171;
+  --color-danger-soft: rgba(248, 113, 113, 0.1);
+  --color-danger-text: #fecaca;
+
+  /* Typography */
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-display: clamp(2.25rem, 4vw + 1.25rem, 3.5rem);
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-black: 800;
+
+  /* Spacing (4px grid) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+
+  /* Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-pill: 999px;
+
+  /* Elevation */
+  --shadow-card:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 30px 60px -20px rgba(0, 0, 0, 0.7);
+  --shadow-button: 0 10px 24px -10px rgba(139, 92, 246, 0.8);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --duration-fast: 120ms;
+  --duration-base: 180ms;
+
+  /* Layout */
+  --content-width: 44rem;
+  --gutter: 1rem;
+}

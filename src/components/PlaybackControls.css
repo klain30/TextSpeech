@@ -1,0 +1,50 @@
+.PlaybackButtons {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.PlaybackButtons .PrimaryButton {
+  flex: 1;
+}
+
+.Progress {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  color: var(--color-text-subtle);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+}
+
+.ProgressTrack {
+  height: 4px;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.ProgressFill {
+  height: 100%;
+  background: var(--gradient-accent);
+  transform: scaleX(var(--progress));
+  transform-origin: left;
+  /* timeupdate fires ~4x/second; a short linear tween hides the steps. */
+  transition: transform 250ms linear;
+}
+
+.Spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spinner-rotate 0.8s linear infinite;
+}
+
+@keyframes spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

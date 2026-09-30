@@ -1,0 +1,32 @@
+.AppHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.AppTitle {
+  margin: 0;
+  color: var(--color-text);
+  font-size: var(--text-display);
+  font-weight: var(--weight-black);
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+.AppTitleAccent {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.AppSubtitle {
+  max-width: 30rem;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+  text-wrap: pretty;
+}
